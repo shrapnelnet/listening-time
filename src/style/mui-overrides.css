@@ -1,0 +1,4 @@
+div > .MuiButtonBase-root, main.container > .MuiButtonBase-root {
+    color: whitesmoke;
+    font-family: "Toshiba", monospace;
+}

@@ -1,0 +1,116 @@
+/*
+font credits vileR @ https://int10h.org/
+keep the good times comin!
+*/
+@font-face {
+    font-display: block;
+    font-family: "Toshiba";
+    /*noinspection CssUnknownTarget*/
+    src: url("/WebPlus_ToshibaSat_8x8.woff2")
+}
+
+:root {
+    --background: #1a1a1a;
+    --primary: whitesmoke;
+    --primary-font: "Toshiba"
+}
+
+body {
+    /*noinspection CssUnknownTarget*/
+    background-image: url("/skulls.jpg");
+    margin: 0;
+    color: var(--primary);
+    font-family: var(--primary-font);
+}
+
+nav {
+    width: 100%;
+    background: black;
+    box-shadow: #292929 2px 2px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > div {
+    margin: 40px;
+}
+
+button > a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    font-family: var(--primary-font);
+    color: white;
+    background: black;
+    border-image-source: linear-gradient(to right, purple, mediumpurple);
+    border-width: 2pt;
+    border-image-slice: 1;
+    height: 30px;
+    width: 400px;
+    outline: none;
+    margin: 10px 0 20px 0;
+    padding: 0 10px;
+}
+
+label {
+    font-size: small;
+}
+
+.brand {
+    font-size: xx-large;
+    width: fit-content;
+    margin: 0;
+}
+
+.inner-margin > button {
+    margin: 0 10px;
+}
+
+.container {
+    margin: 30px auto;
+    padding-bottom: 50px;
+    max-width: 80%;
+    width: 1000px;
+    display: flex;
+    background: black;
+    box-shadow: #292929 inset 1px 1px 5px, #292929 inset -1px -1px 10px;
+}
+
+.title {
+    width: fit-content;
+    text-align: center;
+    margin: 20px auto;
+    background: linear-gradient(to right, purple, slateblue);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media screen and (width < 550px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 0;
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+    }
+
+    main.container > h1, main.container > h3 {
+        margin: 20px;
+        text-align: center;
+    }
+}
