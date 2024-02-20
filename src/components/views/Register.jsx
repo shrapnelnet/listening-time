@@ -18,7 +18,7 @@ export default function Register() {
         const redirect_uri = document.location
             .toString()
             .includes("localhost")
-            ? "http://localhost:3000/callback" : "https://music.shrapnelnet.co.uk/callback"
+            ? "http://localhost:3000/callback" : "https://music.shr4pnel.com/callback"
 
         params.set("client_id", client_id)
         params.set("scope", scope)
