@@ -34,7 +34,7 @@ export default {
 			return new Response(null, { status: 405 })
 
 		const db = env.db
-		let redirect_uri = "http://localhost:3000/callback"
+		let redirect_uri = "https://music.shr4pnel.com/callback"
 		const body: callback | null = await request.json()
 		if (!body)
 			return new Response(null, {
