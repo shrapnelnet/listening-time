@@ -14,6 +14,7 @@ export interface Env {
 	db: D1Database
 	TYLER: string
 	ROSS: string
+	SAM: string
 }
 
 interface ExternalUrls {
@@ -218,7 +219,7 @@ async function getRecentlyPlayed(headers: Headers) {
 
 export default {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-		const all = [env.ROSS, env.TYLER]
+		const all = [env.ROSS, env.TYLER, env.SAM]
 		const db = env.db
 		let tracks = []
 		for (const email of all) {
