@@ -15,6 +15,7 @@ export default function Index() {
     const [tyler, setTyler] = useState({})
     const [rosslan, setRosslan] = useState({})
     const [sam, setSam] = useState({})
+    const [moon, setMoon] = useState({})
 
     useEffect(() => {
         if (isPending)
@@ -22,6 +23,7 @@ export default function Index() {
         setRosslan(data[0])
         setTyler(data[1])
         setSam(data[2])
+        setMoon(data[3])
     }, [isPending])
 
     return (
@@ -42,6 +44,10 @@ export default function Index() {
                 <img src={sam.cover} alt="rosslans album cover"/>
                 <p>{sam.name}</p>
                 <sub>by {sam.artist}</sub>
+                <p>Moon:</p>
+                <img src={moon.cover} alt="rosslans album cover"/>
+                <p>{moon.name}</p>
+                <sub>by {moon.artist}</sub>
             </main>
         </React.Fragment>
     )
