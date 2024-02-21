@@ -109,7 +109,7 @@ label {
         height: 200px;
     }
 
-    main.container > h1, main.container > h3 {
+    main.container > h1, main.container > h3, main.container > p {
         margin: 20px;
         text-align: center;
     }
