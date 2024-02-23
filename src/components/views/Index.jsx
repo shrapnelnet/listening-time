@@ -12,10 +12,16 @@ export default function Index() {
         }
     })
 
-    const [tyler, setTyler] = useState({})
-    const [rosslan, setRosslan] = useState({})
-    const [sam, setSam] = useState({})
-    const [moon, setMoon] = useState({})
+    const placeholder = {
+        cover: "/sadmac.png",
+        artist: "loading...",
+        name: "loading..."
+    }
+
+    const [tyler, setTyler] = useState(placeholder)
+    const [rosslan, setRosslan] = useState(placeholder)
+    const [sam, setSam] = useState(placeholder)
+    const [moon, setMoon] = useState(placeholder)
 
     useEffect(() => {
         if (isPending)
