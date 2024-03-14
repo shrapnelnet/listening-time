@@ -23,6 +23,7 @@ export default function Index() {
     const [sam, setSam] = useState(placeholder)
     const [moon, setMoon] = useState(placeholder)
     const [emma, setEmma] = useState(placeholder)
+    const [river, setRiver] = useState(placeholder)
 
     useEffect(() => {
         if (isPending)
@@ -32,6 +33,7 @@ export default function Index() {
         setSam(data[2])
         setMoon(data[3])
         setEmma(data[4])
+        setRiver(data[5])
     }, [isPending])
 
     return (
@@ -60,7 +62,10 @@ export default function Index() {
                 <img src={emma.cover} alt="emma album cover"/>
                 <p>{emma.name}</p>
                 <sub>by {emma.artist}</sub>
-
+                <p>River:</p>
+                <img src={river.cover} alt="river album cover"/>
+                <p>{river.name}</p>
+                <sub>by {river.artist}</sub>
             </main>
         </React.Fragment>
     )
