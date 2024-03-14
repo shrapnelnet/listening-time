@@ -17,6 +17,7 @@ export interface Env {
 	SAM: string
 	MOON: string
 	EMMA: string
+	RIVER: string
 }
 
 interface ExternalUrls {
@@ -221,7 +222,7 @@ async function getRecentlyPlayed(headers: Headers) {
 
 export default {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-		const all = [env.ROSS, env.TYLER, env.SAM, env.MOON, env.EMMA]
+		const all = [env.ROSS, env.TYLER, env.SAM, env.MOON, env.EMMA, env.RIVER]
 		const db = env.db
 		let tracks = []
 		for (const email of all) {
@@ -250,6 +251,9 @@ export default {
 				continue
 			}
 			const currentlyPlayingJSON: CurrentPlayback = await currentlyPlaying.json()
+			if (currentlyPlayingJSON.item === null) {
+				continue
+			}
 			const prettyCurrentlyPlaying = {
 				cover: currentlyPlayingJSON.item.album.images[1].url,
 				artist: currentlyPlayingJSON.item.artists[0].name,
