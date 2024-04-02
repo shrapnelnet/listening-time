@@ -21,7 +21,6 @@ export default function Index() {
     const [tyler, setTyler] = useState(placeholder)
     const [rosslan, setRosslan] = useState(placeholder)
     const [sam, setSam] = useState(placeholder)
-    const [moon, setMoon] = useState(placeholder)
     const [emma, setEmma] = useState(placeholder)
     const [river, setRiver] = useState(placeholder)
 
@@ -31,7 +30,6 @@ export default function Index() {
         setRosslan(data[0])
         setTyler(data[1])
         setSam(data[2])
-        setMoon(data[3])
         setEmma(data[4])
         setRiver(data[5])
     }, [isPending])
@@ -54,10 +52,6 @@ export default function Index() {
                 <img src={sam.cover} alt="rosslans album cover"/>
                 <p>{sam.name}</p>
                 <sub>by {sam.artist}</sub>
-                <p>Moon:</p>
-                <img src={moon.cover} alt="rosslans album cover"/>
-                <p>{moon.name}</p>
-                <sub>by {moon.artist}</sub>
                 <p>Emma:</p>
                 <img src={emma.cover} alt="emma album cover"/>
                 <p>{emma.name}</p>

@@ -254,6 +254,7 @@ export default {
 			if (currentlyPlayingJSON.item === null) {
 				continue
 			}
+			console.log(currentlyPlayingJSON.error)
 			const prettyCurrentlyPlaying = {
 				cover: currentlyPlayingJSON.item.album.images[1].url,
 				artist: currentlyPlayingJSON.item.artists[0].name,
